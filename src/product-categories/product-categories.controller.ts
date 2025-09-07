@@ -42,7 +42,13 @@ export class ProductCategoriesController {
     return { data: category };
   }
 
+  @UseGuards(AuthGuard('jwt'))
   @Post()
+  @ApiOperation({ summary: 'Create Product' })
+  @ApiBearerAuth()
+  @ApiResponse({ status: 201, description: 'Successfully created Category.' })
+  @ApiResponse({ status: 401, description: 'Unauthorized. Invalid or missing token.' })
+
   async create(@Body() createDto: CreateProductCategoryDto) {
     const newCategory = await this.categoriesService.create(createDto);
     return { data: newCategory };
