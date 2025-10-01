@@ -1,4 +1,4 @@
-// src/product-categories/product-category.entity.ts
+// src/product-categories/product-news.entity.ts
 import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity('product_categories')

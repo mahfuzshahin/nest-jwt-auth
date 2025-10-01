@@ -11,6 +11,11 @@ import { APP_GUARD } from '@nestjs/core';
 import { TasksModule } from './tasks/tasks.module';
 import { ProductCategoriesModule } from './product-categories/product-categories.module';
 import { ProductsModule } from './products/products.module';
+import { CategoryModule } from './category/category.module';
+import { TagsModule } from './tags/tags.module';
+import { NewsModule } from './news/news.module';
+import { MediaModule } from './media/media.module';
+import { NewsGalleryModule } from './news-gallery/news-gallery.module';
 
 @Module({
   imports: [
@@ -33,7 +38,12 @@ import { ProductsModule } from './products/products.module';
     AuthModule,
     TasksModule,
     ProductCategoriesModule,
-    ProductsModule
+    ProductsModule,
+    CategoryModule,
+    TagsModule,
+    NewsModule,
+    MediaModule,
+    NewsGalleryModule
   ],
   controllers: [AppController],
   providers: [AppService,
